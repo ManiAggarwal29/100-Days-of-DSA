@@ -9,7 +9,7 @@ int top = -1;
 void push(char x){
     stack[++top] = x;
 }
-char pop(){
+char pop(){ 
     return stack[top--];
 }
 int precedence(char x){
