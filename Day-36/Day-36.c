@@ -3,41 +3,29 @@ Problem: Circular Queue Using Array - Implement using linked list with dynamic m
 */
 #include<stdio.h>
 #include<stdlib.h>
-
-struct node
-{
+struct node{
     int data;
     struct node *next;
 };
-
 struct node *front = NULL;
 struct node *rear = NULL;
-
-void enqueue(int value)
-{
+void enqueue(int value){
     struct node *newnode;
     newnode = (struct node*)malloc(sizeof(struct node));
     newnode->data = value;
-
-    if(front == NULL)
-    {
+    if(front == NULL){
         front = rear = newnode;
         rear->next = front;
     }
-    else
-    {
+    else{
         rear->next = newnode;
         rear = newnode;
         rear->next = front;
     }
 }
-
-void display()
-{
+void display(){
     struct node *temp;
-
-    if(front == NULL)
-    {
+    if(front == NULL){
         printf("Queue is empty\n");
         return;
     }
