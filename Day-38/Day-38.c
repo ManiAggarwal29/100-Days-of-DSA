@@ -5,37 +5,26 @@ flexibility than a standard queue or stack.
 */
 #include<stdio.h>
 #define MAX 5
-
 int deque[MAX];
 int front = -1;
 int rear = -1;
-
-void insertFront(int x)
-{
-    if((front == 0 && rear == MAX-1) || (front == rear+1))
-    {
+void insertFront(int x){
+    if((front == 0 && rear == MAX-1) || (front == rear+1)){
         printf("Deque Overflow\n");
         return;
     }
-
-    if(front == -1)
-    {
+    if(front == -1){
         front = rear = 0;
     }
-    else if(front == 0)
-    {
+    else if(front == 0){
         front = MAX - 1;
     }
-    else
-    {
+    else{
         front--;
     }
-
     deque[front] = x;
 }
-
-void insertRear(int x)
-{
+void insertRear(int x){
     if((front == 0 && rear == MAX-1) || (front == rear+1))
     {
         printf("Deque Overflow\n");
