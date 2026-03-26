@@ -3,7 +3,6 @@ Perform zigzag (spiral) level order traversal of a binary tree. Alternate levels
 */
 #include <stdio.h>
 #include <stdlib.h>
-
 #define MAX 100
 
 // structure of tree node
